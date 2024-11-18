@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muqadas Fiaz - Resume</title>
+    <style>
+        /* Existing CSS code */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .header p a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .header p a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .section h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .date {
+            float: right;
+            font-size: 1em;
+            color: #666;
+        }
+
+        .section p, .section ul {
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .section ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MUQADAS FIAZ</h1>
+            <p><a href="https://www.linkedin.com/in/muqadas-fiaz" target="_blank">www.linkedin.com/in/muqadas-fiaz</a> | +923149378154 | <a href="mailto:Muqadasmehar07@gmail.com">Muqadasmehar07@gmail.com</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Visitor Counter</h2>
+            <p id="visitorCount">Visitors: Loading...</p>
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p>
+                As a dedicated DevOps Engineer with a specialization in DevSecOps and cloud computing, I am committed to mastering these fields through continuous learning and adaptation to emerging technologies. I am passionate about automating processes, optimizing infrastructure, and ensuring efficient integration and deployment across diverse environments. My work is driven by a commitment to excellence, a deep curiosity for innovation, and a focus on contributing to impactful, forward-thinking projects.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            <h3>OpsOura</h3>
+            <p><strong>Associate DevOps Engineer</strong> <span class="date">Jun, 2024 - Present</span></p>
+            <ul>
+                <li>Work done on Azure using Azure Storage with a custom domain and HTTPS, integrated a visitor counter with CosmosDB, created a Python API using Azure Functions, automated deployment via CI/CD pipelines, and managed cloud resources with ARM templates, while publishing project learnings on medium.</li>
+                <li>Configured Wazuh for centralized security monitoring, configured multiple agents for data collection, and secured agent-server communication with SSL/TLS encryption.</li>
+                <li>Implemented CI/CD pipelines using GitLab CI/CD, automating build, test, and deployment processes for multiple projects.</li>
+                <li>Managed containerized applications using Docker and Kubernetes, including setting up and maintaining clusters, deploying microservices, and ensuring high availability.</li>
+                <li>Utilized version control systems like GitHub, CircleCi and GitLab to manage source code, collaborate with team members, and maintain code quality through code reviews and pull requests.</li>
+                <li>Developed and maintained monitoring and alerting systems using Prometheus and Grafana, ensuring system reliability and quick identification of issues.</li>
+            </ul>
+        </div>
+        
+         <div class="section">
+            <h2>EDUCATION</h2>
+            <p><strong>BS Software Engineering: Information Technology</strong><br>
+            University of Gujrat <br>June 2018 - September 2022</p>
+        </div>
+
+        <div class="section">
+            <h2>TECHNICAL SKILLS AND TOOLS</h2>
+            <ul>
+                <li><strong>DevSecOps</strong>: Wazuh, DevSecOps Maturity Models (DSOMM).</li>
+                <li><strong>Configuration Management</strong>: Ansible.</li>
+                <li><strong>Version Control Systems</strong>: Git, GitHub, GitLab.</li>
+                <li><strong>Scripting & Automation</strong>: Bash, Crontab.</li>
+                <li><strong>Containerization and Orchestration</strong>: Docker, Podman, Kubernetes(k8's, k3's).</li>
+                <li><strong>CI/CD Pipelines</strong>: Jenkins, GitLab CI, GitHub Actions, CircleCI.</li>
+                <li><strong>Cloud Platforms</strong>: Microsoft Azure, Google cloud.</li>
+                <li><strong>Container Registries</strong>: Harbor registry, Docker Private registry.</li>
+                <li><strong>Monitoring & Visualization</strong>: Prometheus, Grafana, Elasticsearch, Kibana, Metricbeat.</li>
+                <li><strong>File System Management</strong>: File system structures and management.</li>
+                <li><strong>System Administration</strong>: Linux (RockyLinux, AlmaLinux, Ubuntu, CentOS, Debian), Windows.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>CERTIFICATIONS</h2>
+            <p><strong>National Expansion Plan (NEP) - Software Engineer</strong><br>
+            <strong>Institution</strong>: National Expansion Plan (NEP) of NIC<br>
+            Successfully completed a comprehensive certification program under the NEP, focusing on modern technology solutions, startup incubation, and software engineering practices. Developed skills in building scalable applications and systems using cutting-edge technology.</p>
+        </div>
+    </div>
+    <script>
+        async function updateVisitorCount() {
+            const apiUrl = "https://us-central1-genuine-habitat-439408-a1.cloudfunctions.net/muqadas-fn"; // Cloud Function URL
+    
+            try {
+                // Fetch the current count from the API (GET request)
+                const response = await fetch(apiUrl, { method: "GET" });
+                const data = await response.json();
+                document.getElementById("visitorCount").innerText = `Visitors: ${data.count}`;
+    
+                // Increment the count (POST request)
+                await fetch(apiUrl, { method: "POST" });
+            } catch (error) {
+                console.error("Error updating visitor count:", error);
+            }
+        }
+    
+        // Call the function to update the count on page load
+        updateVisitorCount();
+    </script>
+</body>
+</html>
